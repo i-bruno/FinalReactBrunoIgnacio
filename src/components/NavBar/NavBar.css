@@ -1,0 +1,30 @@
+header{
+    display: flex;
+    align-items: center;
+}
+nav{
+    height: 5rem;
+    display:flex;
+    align-items: center
+}
+.menu{
+    margin: 2px 2px 2px 2px;
+    padding: 2px 2px 2px 2px;
+    list-style-type: none;
+    justify-content: space-evenly;
+    display: flex; 
+    align-items: center;
+}
+
+.menu li {
+    margin: 2px 2px 2px 2px;
+    padding: 2px 2px 2px 2px;
+    list-style-type: none;
+    justify-content: space-evenly;
+    display: flex; 
+    align-items: center;
+}
+
+.logoCasla{
+    width: 5vw;
+}

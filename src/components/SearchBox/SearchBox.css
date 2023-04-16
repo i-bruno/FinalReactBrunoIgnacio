@@ -1,0 +1,25 @@
+.SearchBox{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    width: 25rem;
+    outline: none;
+    margin-right: 1rem;
+}
+
+.btnSearch{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    width: 6rem;
+    outline: none;
+    margin-right: 1rem;
+    border-style: none;
+    background: linear-gradient(to left, #bf1b27, #263d54);
+    color:white;
+    cursor:pointer;
+}
+
+.btnSearch:hover{
+    background: linear-gradient(to left, #263d54, #bf1b27);
+}
