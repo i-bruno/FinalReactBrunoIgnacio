@@ -96,7 +96,7 @@ const Checkout = () => {
             </form>
             {
                 ordenId && (
-                    <strong>¡Gracias por tu compra! Tu número de orden es {ordenId} </strong>
+                    <strong>¡Gracias por tu compra! Tu número de orden es {ordenId}. Nos pondremos en contacto para coordinar el envío. </strong>
                 )
             }
 
