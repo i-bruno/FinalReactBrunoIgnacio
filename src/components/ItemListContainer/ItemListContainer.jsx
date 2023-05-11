@@ -1,32 +1,37 @@
-import { useState, useEffect } from "react"
-import { getProductos, getProductosPorCategoria } from "../../asyncmock"
-import ItemList from '../ItemList/ItemList';
-import { useParams } from "react-router-dom";
-
+import { useState, useEffect } from 'react'
+import {collection, getDocs} from "firebase/firestore";
+import { db } from '../../services/firebase/config';
+import { Link } from 'react-router-dom'
+import './ItemListContainer.css';
 
 const ItemListContainer = () => {
-    
-    const [productos, setProductos] = useState([]);
+    const [camisetas, setCamisetas] = useState([]);
 
-    const {idCat} = useParams();
+    useEffect(() => {
 
-    useEffect(()=>{
+        const misCamisetas = collection(db, "camisetas");
+        getDocs(misCamisetas)
+            .then((respuesta) => {
+                setCamisetas(respuesta.docs.map((doc) => ({ id: doc.id, ...doc.data() })));
+            })
+    }, []);
 
-        const funcionProductos = idCat ? getProductosPorCategoria : getProductos;
-
-        funcionProductos(idCat)
-            .then(res=> setProductos(res))
-            .catch(error => console.error(error))
-    }, [idCat])
-    
-    
-    
-    
     return (
-        <div>
-            <h2>Productos</h2>
-            <ItemList products={productos}/>
-        </div>
+        <div className='listContainer'>
+        {
+            camisetas.map((camisetas) => (
+                <div className='contenedorItem'>
+                    <h2>Nombre: {camisetas.nombre} </h2>
+                    <h3>Marca: {camisetas.marca} </h3>
+                    <h3>Precio: $ {camisetas.precio} </h3>
+                    <h3> ID: {camisetas.id} </h3>
+                    <img className='imgCamisetas' src={camisetas.img} alt={camisetas.nombre} />
+                    <Link to={`/camisetas/${camisetas.id}`}  className='verDetalle'> Ver Detalles </Link>
+                </div>
+            ))
+
+        }
+    </div>
     )
 }
 

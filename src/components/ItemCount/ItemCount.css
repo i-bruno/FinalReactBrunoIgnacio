@@ -1,0 +1,30 @@
+.btn {
+    padding: 0.2rem;
+    margin: 0.2rem;
+    border-radius: 1rem;
+    background: linear-gradient(to left, #bf1b27, #263d54);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 2rem;
+}
+
+.contador {
+    display: flex;
+    align-items: center;
+    background-color: rgb(146, 146, 146);
+    width: 6rem;
+    border-radius: 1rem;
+    justify-content: center;
+    font-weight: 700;
+    margin: 1rem;
+}
+
+.btnAgregar {
+    padding: 0.2rem;
+    margin: 0.2rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    width: 5rem;
+}

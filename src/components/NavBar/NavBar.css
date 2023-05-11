@@ -1,30 +1,76 @@
-header{
+header {
     display: flex;
     align-items: center;
-}
-nav{
-    height: 5rem;
-    display:flex;
-    align-items: center
-}
-.menu{
-    margin: 2px 2px 2px 2px;
-    padding: 2px 2px 2px 2px;
-    list-style-type: none;
-    justify-content: space-evenly;
-    display: flex; 
-    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    border-bottom: solid 1px #cacaca;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.menu li {
-    margin: 2px 2px 2px 2px;
-    padding: 2px 2px 2px 2px;
-    list-style-type: none;
-    justify-content: space-evenly;
-    display: flex; 
-    align-items: center;
+li {
+    display: inline-block;
+    margin: 0.5rem;
+    cursor: pointer;
+    background: linear-gradient(to left, #bf1b27, #263d54);
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
-.logoCasla{
+li a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+li p{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+.imgCasla{
     width: 5vw;
+}
+
+.nav > li {
+    float:left;
+}
+
+.nav li a {
+    color:#fff;
+    text-decoration:none;
+    display:block;
+}
+
+.nav li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+}
+
+.nav li:hover > ul {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    background-color: rgb(238, 238, 238);
+    border-radius: 1rem;
+    width: 35rem;
+    margin:1rem;
+    align-content: stretch;
+}
+
+.nav li ul li {
+    position:relative;
+}
+
+.nav li ul li ul {
+    right:-140px;
+    top:0p;
+}
+
+.collapse{
+    padding: 1rem;
 }

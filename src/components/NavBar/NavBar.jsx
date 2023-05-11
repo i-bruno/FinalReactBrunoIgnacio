@@ -1,33 +1,70 @@
-import React from 'react'
+import CartWidget from "../CartWidget/CartWidget"
+import SearchBox from "../SearchBox/SearchBox";
 import './NavBar.css'
-import { NavLink, Link } from 'react-router-dom'
-import CartWidget from '../CartWidget/CartWidget'
+import { NavLink, Link } from "react-router-dom";
 
 const NavBar = () => {
+    const imgCasla = "../logo.png";
     return (
         <header>
             <Link to={"/"}>
-                <img className='logoCasla' src="../logo.png" alt="logo casla" />
+                <img className="imgCasla" src={imgCasla} alt="Logo CASLA" />
             </Link>
-            <nav className='NavBar'>
-                <ul className='menu'>
-                    <li>
-                        <NavLink to={`/categoria/1`}>Camisetas</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={`/categoria/2`}>Shorts</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={`/categoria/3`}>Camperas</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={`/categoria/4`}>Buzos</NavLink>
-                    </li>
-                </ul>
-            </nav>
-        <CartWidget/>
-        </header>
+            <ul className="nav">
+                <li>
+                    <NavLink to={`/titulares`}>Titulares</NavLink>
+                </li>
 
+                <li>
+                    <NavLink to={`/alternativas`} >Alternativas</NavLink>
+                </li>
+                <li>
+                    <p>
+                        Marcas
+                    </p>
+                    <ul className="collapse">
+                        <li>
+                            <NavLink to={`/jardin`} >El jardín de Oscar</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={`/nanque`} >Nanque</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={`/unisport`} >Unisport</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={`/topper`} >Topper</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={`/penalty`} >Penalty</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={`/umbro`} >Umbro</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={`/newbalance`} >New Balance</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={`/luanvi`} >Luanvi</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={`/mebal`} >Mebal</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={`/siqnia`} >Siqnia</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={`/lotto`} >Lotto</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={`/nike`} >Nike</NavLink>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <SearchBox />
+            <CartWidget />
+        </header>
     )
 }
 

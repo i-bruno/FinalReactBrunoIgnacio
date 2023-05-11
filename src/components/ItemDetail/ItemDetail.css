@@ -1,8 +1,19 @@
 .contenedorItem{
     padding: 1rem;
     margin: 1rem;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+    background-color: #e3e3e3;
 }
 
-.imgDetail{
+.imgCamiseta{
     width: 25vw;
+}
+
+.textoDetalle{
+    width: 25rem;
 }
