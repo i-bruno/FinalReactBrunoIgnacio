@@ -1,71 +1,28 @@
-# Getting Started with Create React App
+## Tienda CASLA ##
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descripción
+Se desarrolla una app de e commerce o tienda virtual sobre camisetas de fútbol tanto antiguas y actuales del Club Atlético San Lorenzo de Almagro (Buenos Aires, Argentina)
 
-## Available Scripts
+##Funcionalidades
+La aplicación se desarrolla con React.js, y cuenta con tres formas de filtrado de los productos.
+	
+1. En primer lugar, desde el menú se puede realizar un primer filtrado para que la app seleccione las camisetas se caracterizan como **titulares**
+2. En segundo lugar, se establece un segundo filtrado sobre camisetas **alternativas**
+3. Por último, a través de un menu desplegable el usuario puede elegir las camisetas de acuerdo a la marca.
 
-In the project directory, you can run:
+##Uso
+El uso de la app es simple, y responde al típico funcionamiento de una tienda virtual.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. El usuario busca el producto que desea.Luego de encontrarlo, clickea en Ver Detalles.
+2. Allí la app lo dirige a la página del producto. En esta instancia el usuario selecciona la cantidad que desea comprar clickea "Agregar al carrito" y luego "Terminar compra".
+3. Una vez realizado esto, el sistema conduce al carrito donde muestra los productos seleccionados teniendo dos opciones: Vaciar el carrito o Finalizar compra.
+4. Al apretar en este último el sistema al checkout, donde el usuario observa el listado de lo que está comprando, y debe poner sus datos personales. Acto seguido, apreta en Finalizar compra.
+5. Una vez realizado esto, el sistema muestra un mensaje y ofrece al usuario un número de órden que es registrado en la base de datos.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Desarrollo ##
+El desarrollo del proyecto se realiza a partir de la biblioteca javascript de código abierto React.js como trabajo final del curso de React.js de Coderhouse.
+Si bien el trabajo es entregado en estado óptimo de funcionamiento, se sigue y seguirá mejorando la interfaz así como también su respuesta ante distintas peticiones y la incorporación de nuevas y mejores características.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# preentrega2BrunoIgnacio" 
+## Autor ##
+Diseñado y programado por Ignacio Bruno

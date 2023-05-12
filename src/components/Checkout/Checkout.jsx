@@ -17,10 +17,8 @@ const Checkout = () => {
     const [camisetas, setCamisetas] = useState([]);
 
     useEffect(() => {
-        //Creamos una consulta a la colección "productos"
-        const q = query(collection(db, "camisetas"));
 
-        //onSnapShot es una función que escucha los cambios en la consulta. 
+        const q = query(collection(db, "camisetas"));
 
         const modificar = onSnapshot(q, function (querySnapShot) {
             const docs = [];
