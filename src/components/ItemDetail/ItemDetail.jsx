@@ -6,12 +6,12 @@ import { CarritoContext } from '../../context/CarritoContext'
 import { useContext } from 'react'
 import { collection, getDocs } from 'firebase/firestore'
 import { db } from "../../services/firebase/config"
-import './ItemDetail.css'
 
 const ItemDetail = ({ id, nombre, marca, precio, img, stock }) => {
 
 
     const [agregarCantidad, setAgregarCantidad] = useState(0);
+
     const { agregarProducto } = useContext(CarritoContext);
 
     const manejadorCantidad = (cantidad) => {

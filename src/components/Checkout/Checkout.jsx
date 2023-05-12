@@ -1,7 +1,7 @@
-import { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import { CarritoContext } from '../../context/CarritoContext'
 import { db } from '../../services/firebase/config'
-import { collection, addDoc } from 'firebase/firestore'
+import { collection, addDoc, doc, query, updateDoc, onSnapshot } from 'firebase/firestore'
 import './Checkout.css'
 
 const Checkout = () => {
@@ -13,6 +13,42 @@ const Checkout = () => {
     const [emailConfirmacion, setEmailConfirmacion] = useState("");
     const [error, setError] = useState("");
     const [ordenId, setOrdenId] = useState("");
+
+    const [camisetas, setCamisetas] = useState([]);
+
+    useEffect(() => {
+        //Creamos una consulta a la colección "productos"
+        const q = query(collection(db, "camisetas"));
+
+        //onSnapShot es una función que escucha los cambios en la consulta. 
+
+        const modificar = onSnapshot(q, function (querySnapShot) {
+            const docs = [];
+            querySnapShot.forEach(function (doc) {
+                docs.push({ id: doc.id, ...doc.data() });
+            });
+            setCamisetas(docs);
+        });
+
+        return () => {
+            modificar();
+        };
+    }, []);
+
+    const handleCompra = (id, stock) => {
+        if (stock > 0) {
+            const camisetasRef = doc(db, "camisetas", id);
+            updateDoc(camisetasRef, {
+                stock: stock - 1,
+            })
+                .then(() => {
+                    console.log("El stock ha sido actualizado.");
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
+        }
+    }
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -92,7 +128,7 @@ const Checkout = () => {
                     <input type="email" value={emailConfirmacion} onChange={(e) => setEmailConfirmacion(e.target.value)} />
                 </div>
                 {error && <p style={{ color: "red" }}> {error} </p>}
-                <button type='submit' className='btnProducto'>Finalizar Compra</button>
+                <button type='submit' className='btnProducto' onClick={() => handleCompra(camisetas.id, camisetas.stock)}>Finalizar Compra</button>
             </form>
             {
                 ordenId && (
