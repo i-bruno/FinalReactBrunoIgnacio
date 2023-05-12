@@ -1,16 +1,16 @@
 ## Tienda CASLA ##
 
-## Descripción
+## Descripción ##
 Se desarrolla una app de e commerce o tienda virtual sobre camisetas de fútbol tanto antiguas y actuales del Club Atlético San Lorenzo de Almagro (Buenos Aires, Argentina)
 
-##Funcionalidades
+## Funcionalidades ##
 La aplicación se desarrolla con React.js, y cuenta con tres formas de filtrado de los productos.
 	
 1. En primer lugar, desde el menú se puede realizar un primer filtrado para que la app seleccione las camisetas se caracterizan como **titulares**
 2. En segundo lugar, se establece un segundo filtrado sobre camisetas **alternativas**
 3. Por último, a través de un menu desplegable el usuario puede elegir las camisetas de acuerdo a la marca.
 
-##Uso
+## Uso ##
 El uso de la app es simple, y responde al típico funcionamiento de una tienda virtual.
 
 
