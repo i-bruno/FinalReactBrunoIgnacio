@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { CarritoContext } from '../../context/CarritoContext'
 import { useContext } from 'react'
 
-const ItemDetail = ({ id, nombre, marca, precio, img, stock }) => {
+const ItemDetail = ({ id, nombre, marca, precio, img, stock, detalle }) => {
 
 
     const [agregarCantidad, setAgregarCantidad] = useState(0);
@@ -29,7 +29,7 @@ const ItemDetail = ({ id, nombre, marca, precio, img, stock }) => {
                 <h3>Stock: {stock}</h3>
                 <div className='textoDetalle'>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam iste reiciendis tempora unde! Quam commodi esse dicta odit nobis, enim, accusamus corrupti veritatis, excepturi aliquam laudantium? Veritatis ex sapiente deserunt.
+                        {detalle}
                     </p>
                 </div>
                 <img className='imgCamiseta' src={img} alt={nombre} />

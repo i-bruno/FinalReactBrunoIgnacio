@@ -24,7 +24,7 @@
 .subCompra{
     display:flex;
     flex-direction: column;
-    border:#bf1b27 solid;
+    border:#bbbbbb solid;
     padding: 1rem;
     margin: 1rem;
     border-radius: 2rem;
